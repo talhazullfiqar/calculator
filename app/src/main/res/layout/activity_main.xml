@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="end"
+        android:textSize="32sp"
+        android:padding="16dp"
+        android:background="#EEEEEE"
+        android:text="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintBottom_toTopOf="@+id/resetButton" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:columnCount="4"
+        app:layout_constraintTop_toBottomOf="@+id/display"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <!-- First Row -->
+        <Button
+            android:text="7"
+            android:onClick="onDigitClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_orange"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:text="8"
+            android:onClick="onDigitClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_orange"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:text="9"
+            android:onClick="onDigitClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_orange"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:text="/"
+            android:onClick="onOperatorClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_grey"
+            android:textColor="#FFFFFF"/>
+
+        <!-- Second Row -->
+        <Button
+            android:text="4"
+            android:onClick="onDigitClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_orange"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:text="5"
+            android:onClick="onDigitClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_orange"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:text="6"
+            android:onClick="onDigitClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_orange"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:text="*"
+            android:onClick="onOperatorClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_grey"
+            android:textColor="#FFFFFF"/>
+
+        <!-- Third Row -->
+        <Button
+            android:text="1"
+            android:onClick="onDigitClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_orange"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:text="2"
+            android:onClick="onDigitClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_orange"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:text="3"
+            android:onClick="onDigitClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_orange"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:text="-"
+            android:onClick="onOperatorClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_grey"
+            android:textColor="#FFFFFF"/>
+
+        <!-- Fourth Row -->
+        <Button
+            android:text="0"
+            android:onClick="onDigitClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_orange"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:text="."
+            android:onClick="onDecimalClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_orange"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:text="="
+            android:onClick="onEqualsClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_grey"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:text="+"
+            android:onClick="onOperatorClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_grey"
+            android:textColor="#FFFFFF"/>
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:text="Reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onResetClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/button_grey"
+        android:textColor="#FFFFFF"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
